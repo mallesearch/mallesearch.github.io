@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Pesquisa no Google</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+     <style>
+     *{
+          margin: 0;
+          padding: 0;
+     }
+     
+     .allContent{
+          height: 100px;
+          width: 100%;
+     }
+     
+     .allContentChild{
+          width: 90%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 200px;
+     }
+     
+     .logo{
+          height: 80px;
+          padding: 20px;
+     }
+     
+     .pesquisa{
+          width: 100%;
+     }
+     
+     form{
+          height: 60px;
+          display: flex;
+          flex-dirction: row;
+     }
+     
+     #searchTerm{
+          width: 75%;
+          height: 56px;
+          border: 2px solid #008080;
+          border-radius: 20px 0px 0px 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 18px;
+          font-family: 'Montserrat', sans-serif;
+     }
+     
+     #searchTerm:focus{
+          box-shadow: 0 0 0 0;
+          border: 2px solid #008080;
+          outline: 0;
+     }
+     
+     #searchTerm::-webkit-input-placeholder {
+          color: #D5D5D5;
+          font-family: 'Montserrat', sans-serif;
+     }
+     
+     button{
+          width: 15%;
+          height: 60px;
+          background: #008080;
+          border: none;
+          border-radius: 0px 20px 20px 0px;
+          color: #FFF;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+     
+     .iconSearch{
+          height: 50%;
+          filter: invert(100%);
+     }
+     
+     footer {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 1.em;
+        font-family: 'Montserrat', sans-serif;
+      }
+     </style>
+</head>
+<body>
+     <div class="allContent" align="center">
+          <div class="allContentChild">
+               <img class="logo"  src="https://files.catbox.moe/35j2ba.png" "draggable = false"/>
+               <div class="pesquisa">
+                    <form>
+                         <input type="text" id="searchTerm" placeholder="O que deseja meu nobre?">
+                         <button type="submit" onclick="search()">
+                              <img class="iconSearch"  src="https://files.catbox.moe/e2z71q.png"/>
+                         </button>
+                    </form>
+               </div>
+          </div>
+     </div>
+     <footer>© 2023 Mall-E</footer>
+     
+     <script>
+    function search() {
+      var searchTerm = document.getElementById("searchTerm").value;
+      window.open("https://www.google.com/search?q=" + searchTerm);
+/*
+window.open("https://www.google.com/search?q=" + searchTerm, "_blank");*/
+    }
+  </script>
+</body>
+</html>
